@@ -6,6 +6,7 @@ require("dotenv").config();
 const authRoutes = require("./routes/authRoutes");
 const locationRoutes = require("./routes/locationRoutes");
 const pickupRoutes = require("./routes/pickupRoutes");
+const paymentRoutes = require('./routes/paymentRoutes');
 const assignmentRoutes = require("./routes/assignmentRoutes");
 const companyRoutes = require("./routes/companyRoutes");
 const truckRoutes = require("./routes/truckRoutes");
@@ -46,6 +47,7 @@ app.get("/", (req, res) => {
 app.use("/api/auth", authRoutes);
 app.use("/api/locations", locationRoutes);
 app.use("/api/pickups", pickupRoutes);
+app.use('/api/payments', paymentRoutes);
 app.use("/api/assignments", assignmentRoutes);
 app.use("/api/companies", companyRoutes);
 app.use("/api/trucks", truckRoutes);
